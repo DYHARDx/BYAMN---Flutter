@@ -1,99 +1,168 @@
-<div align="center">
-  <img src="https://img.shields.io/badge/BYAMN-Premium%20Platform-black?style=for-the-badge&logo=next.js" alt="BYAMN Target">
-  
-  <h1>🌟 BYAMN - World-Class Platform 🌟</h1>
-  <p><b>Where Innovation Meets Execution. Welcome to the official repository of the BYAMN Web Platform.</b></p>
-  
-  [![Next.js](https://img.shields.io/badge/Next.js-15+-black?style=flat-square&logo=next.js)](#)
-  [![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue?style=flat-square&logo=typescript)](#)
-  [![TailwindCSS](https://img.shields.io/badge/Tailwind-CSS-38B2AC?style=flat-square&logo=tailwind-css)](#)
-  [![License](https://img.shields.io/badge/License-Proprietary-red?style=flat-square)](#)
+# BYAMN Flutter App
+
+BYAMN mobile app built with Flutter using **Provider** architecture, static/demo-first screens, Firebase auth hooks, connectivity handling, and module-based UI (courses, internships, jobs, tools, network, mock tests, mentorship, membership, careers).
+
+## Tech Stack
+- Flutter (Dart)
+- Provider (state management)
+- Firebase (`firebase_core`, `firebase_auth`, `google_sign_in`)
+- `go_router` (auth-aware routing)
+- `flutter_secure_storage` (login persistence)cm
+39Z- `connectivity_plus` (internet wrapper)
+- `url_launcher` (privacy/terms external links)
+
+
+## Screenshots
+
+<div>
+<img alt="ScreenShot" src="./resources/splash.png" width="200" />
+<img alt="ScreenShot" src="./resources/auth.png" width="200" />
+<img alt="ScreenShot" src="./resources/auth2.png" width="200" />
+<img alt="ScreenShot" src="./resources/user.png" width="200" />
+<img alt="ScreenShot" src="./resources/drawer.png" width="200" />
+<img alt="ScreenShot" src="./resources/feature.png" width="200" />
+<img alt="ScreenShot" src="./resources/feature2.png" width="200" />
+<img alt="ScreenShot" src="./resources/feature-3.png" width="200" />
+<img alt="ScreenShot" src="./resources/no_internet.png" width="200" />
 </div>
 
----
-
-## 🚀 What is BYAMN?
-
-**BYAMN** (hosted at [byamn.in](https://byamn.in)) is a premium, state-of-the-art educational and networking ecosystem designed for the modern developer and learner. It's not just a web application; it's a bridge between learning and real-world application. 
-
-Key pillars of our platform:
-- 💡 **Open Source Simulation:** A hyper-realistic, VS Code-inspired UI to guide users through simulation steps.
-- 🎓 **Courses & Resources:** Top-tier learning materials crafted for excellence.
-- 💼 **Careers & Networking:** Connections, mentors, jobs, internships, hackathons, and scholarships all under one roof.
-- 🎨 **Immersive UI/UX:** Built with modern web design principles—fluid animations, responsive layouts, and an aesthetics-first approach.
-
-> *"This repository is the heart of BYAMN's web presence, engineered with Next.js App Router for peak performance and SEO optimization."*
-
----
-
-## 📂 File & Directory Structure
-
-To keep the platform robust and scalable, our codebase is beautifully organized. Here is a guided tour of the architecture:
-
-### 🏗️ Root Anatomy
-
-| Directory / File | Description |
-| :--- | :--- |
-| 📁 `src/` | The core soul of our application. All source code and UI components reside here. |
-| 📁 `public/` | Static assets, ready to be served at lightning speed. |
-| 📁 `node_modules/` | The heavy lifting companions (dependencies). |
-| 📄 `package.json` | Project manifest orchestrating our scripts and dependencies. |
-| 📄 `tsconfig.json` | The strict rules defining our TypeScript environment. |
-| 📄 `next.config.ts` | The brain governing Next.js build and runtime behavior. |
-| 📄 `.env.local` | Top-secret environment variables. |
-
-### 🧬 Inside the `src/` Core
+## Project Structure (Current)
 
 ```text
-src/
-├── app/               # 🚦 Next.js App Router: Core routing and page definitions
-│   ├── api/           # 🔌 Backend API routes bridging external services and DBs
-│   ├── about/         # 🏢 About us page
-│   ├── careers/       # 🚀 Career portal
-│   ├── courses/       # 📚 Course library and learning paths
-│   ├── network/       # 🤝 User connections and networking hub
-│   ├── opensource/    # 💻 The legendary Open Source Simulator UI
-│   ├── profile/       # 👤 User portfolio and profile views
-│   ├── tools/         # 🧰 Utilities and inner gears for devs
-│   ├── layout.tsx     # 🖼️ Master Layout wrapping the platform
-│   ├── page.tsx       # 🏠 The landing page—where the magic begins!
-│   └── globals.css    # 🎨 The foundational styling (Tailwind & custom properties)
-|
-├── components/        # 🧩 Reusable, pixel-perfect UI building blocks
-├── data/              # 📊 Static datasets, mock data, and configurations
-├── features/          # 🎯 Domain-driven feature modules
-├── lib/               # 🛠️ Utility functions, hooks, and helpers
-└── types/             # 🏷️ TypeScript interfaces and type definitions
+lib/
+├── byamn_app.dart
+├── main.dart
+├── firebase_options.dart
+├── constants/
+│   ├── app_constants.dart
+│   ├── assets_path.dart
+│   └── router/
+│       ├── app_router.dart
+│       └── app_routes_list.dart
+├── core/
+│   ├── secure_storage/
+│   └── theme/
+├── data/
+│   ├── repositories/
+│   │   └── static_content_repository.dart
+│   └── static/
+│       └── byamn_static_json.dart
+├── models/
+│   ├── app_user.dart
+│   ├── home_models.dart
+│   ├── network_user.dart
+│   ├── notification_item.dart
+│   └── opportunity_models.dart
+├── providers/
+│   ├── auth_provider.dart
+│   ├── auth_form_provider.dart
+│   ├── connectivity_provider.dart
+│   ├── content_provider.dart
+│   ├── navigation_provider.dart
+│   └── theme_provider.dart
+├── screens/
+│   ├── app/
+│   ├── auth/
+│   ├── courses/
+│   ├── details/
+│   ├── home/
+│   ├── internships/
+│   ├── notifications/
+│   ├── profile/
+│   └── no_internet_screen.dart
+├── services/datasource/
+└── shared/
+      ├── utils/
+      └── widgets/
 ```
 
----
+## Provider Architecture
 
-## ⚡ Quick Start
+App is fully provider-driven (no `setState` for screen/business state):
 
-Ready to spin up the magic locally?
+- `AuthProvider`: login/signup/google auth + secure login flag
+- `ContentProvider`: static datasets, sorting, pagination, FAQs, jobs/tools/network data
+- `NavigationProvider`: bottom nav + loader simulation
+- `ConnectivityProvider`: realtime connection status
+- `ThemeProvider`: light/dark theme switching
+- `AuthFormProvider`: auth form controllers/visibility/checkbox state
 
-1. **Install Dependencies:**
-   ```bash
-   npm install
-   ```
+##  MongoDB JSON Compatibility
 
-2. **Set up Environment Variables:**
-   *Make sure you have your `.env.local` configured correctly.*
+Shared a JSON (collections like `careers`, `courses`, `featured`, `hackathons`, `internships`, `jobs`, `mentors`, `notifications`, `practice`, `premium_resources`, `resources`, `scholarships`, `users`).
 
-3. **Ignite the server:**
-   ```bash
-   npm run dev
-   ```
-   *Your portal to BYAMN should now be live at [http://localhost:3000](http://localhost:3000)*
+### Current app consumption status
 
----
+- Already aligned and rendered in app flows:
+   - `courses`
+   - `internships`
+   - `jobs`
+   - `notifications`
+   - `users` (network/community style)
+   - `hackathons` / `featured` / `tools` style data represented via `competition` and `tool` sections
 
-## 🛡️ License & Proprietary Notice
+- Module screens already implemented as static functional UI:
+   - Global Network
+   - My Connections
+   - Mock Tests
+   - Mentorship
+   - Membership
+   - Tools
+   - Careers
 
-> [!WARNING]  
-> This software is the exclusive property of **[byamn.in](https://byamn.in)**. 
-> The codebase, UI designs, specific features, and Open Source Simulation mechanics are strictly proprietary. Cloning, copying, or distributing for purposes other than personal learning and collaboration within the BYAMN ecosystem is **strictly prohibited**. 
+### Data adapter point
 
-<div align="center">
-  <i>Crafted with passion, code, and an eye for perfection. 🖤</i>
-</div>
+Use `lib/data/repositories/static_content_repository.dart` as the adapter layer to map incoming MongoDB JSON to app models (`OpportunityItem`, `NetworkUser`, `AppNotificationItem`, `FaqItem`).
+
+ backend will sends exactly the schema posted, map fields as follows:
+- `logo`/`image`/`photo` -> `imageUrl`
+- `company`/`platform` -> `provider`
+- `applyLink`/`link` -> `url`
+- `participants`/`users` -> optional badges or subtitle metrics
+- collection source -> `OpportunityType` (`course`, `internship`, `job`, `tool`, `competition`)
+
+## Firebase Options (Generate / Update)
+
+You requested generated steps for `firebase_options.dart`:
+
+1. Install FlutterFire CLI (once):
+```bash
+dart pub global activate flutterfire_cli
+```
+
+2. Ensure CLI path is available in shell:
+```bash
+export PATH="$PATH":"$HOME/.pub-cache/bin"
+```
+
+3. Configure Firebase for this Flutter project:
+```bash
+cd /Users/admin/Desktop/byamn
+flutterfire configure
+```
+
+4. This regenerates:
+- `lib/firebase_options.dart`
+- platform firebase config updates (based on selected targets)
+
+## Run Locally
+
+```bash
+cd /Users/admin/Desktop/byamn
+flutter pub get
+flutter run
+```
+
+## Release APK
+
+```bash
+cd /Users/admin/Desktop/byamn
+flutter build apk --release
+```
+
+APK output:
+- `build/app/outputs/flutter-apk/app-release.apk`
+
+## Notes
+- `firebase_options.dart` is generated and can be re-generated any time from FlutterFire CLI.
+- Static content + large demo datasets are currently generated through provider/repository  flow.

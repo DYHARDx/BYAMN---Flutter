@@ -1,0 +1,78 @@
+{
+  "sourceDate": "2026-04-05",
+  "site": "https://www.byamn.in",
+  "hero": {
+    "title": "Aggregate, Identify, and Apply all in one place",
+    "subtitle": "Your all-in-one hub for the best internships, courses, and resources. Verified daily to help you build your future.",
+    "ctaPrimary": "Get started for free",
+    "ctaSecondary": "Take notes of crucial internship dates, and apply with ease. Never miss a deadline!"
+  },
+  "stats": [
+    {"label": "Free Courses Added", "value": "100+"},
+    {"label": "Live Hackathons", "value": "50+"},
+    {"label": "Time Saved (Hours)", "value": "50k+"},
+    {"label": "Platforms Scanned", "value": "50+"}
+  ],
+  "features": [
+    "We Aggregate Sources",
+    "We Verify Quality",
+    "You Apply Directly"
+  ],
+  "openSource": {
+    "title": "Master Open Source safely",
+    "description": "Learn Git, Forking, Branching and Pull Requests in a safe, guided environment — earn a verified certificate.",
+    "link": "https://www.byamn.in/opensource"
+  },
+  "whyChoose": [
+    {
+      "title": "Verified Links",
+      "description": "We pick the best internships, jobs, and hackathons tailored for Indian students."
+    },
+    {
+      "title": "100% Free Learning",
+      "description": "Access hundreds of free Udemy courses and Google Skills paths."
+    },
+    {
+      "title": "All-in-One Dashboard",
+      "description": "No more jumping between Unstop, LinkedIn, and other websites to find what you need."
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "Priti Kumari",
+      "role": "Computer Science Student",
+      "quote": "BYAMN saved me hours of searching. I found the perfect free Udemy course and an internship in one place!"
+    },
+    {
+      "name": "Ananya Gupta",
+      "role": "Aspiring Developer",
+      "quote": "Instead of checking Unstop and Fundit separately, I just come here. The curated hackathon list is amazing."
+    },
+    {
+      "name": "Sahil Verma",
+      "role": "Final Year Student",
+      "quote": "The ultimate time-saver! I participated in a hackathon found through BYAMN and it boosted my resume instantly."
+    }
+  ],
+  "faq": [
+    "What is BYAMN?",
+    "Are the courses actually free?",
+    "Which platforms do you track?",
+    "Do I need to pay to use BYAMN?"
+  ],
+  "legal": {
+    "privacyUrl": "https://www.byamn.in/privacy",
+    "termsUrl": "https://www.byamn.in/terms",
+    "dmcaUrl": "https://www.byamn.in/removal"
+  },
+  "homeCategories": [
+    "Explore Courses",
+    "Hackathons & Quizzes",
+    "Internships",
+    "Jobs",
+    "Scholarships & Grants",
+    "Practice & Mock Tests",
+    "Essential Tools & Software",
+    "Learning Resources"
+  ]
+}
