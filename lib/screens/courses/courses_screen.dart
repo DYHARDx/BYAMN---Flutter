@@ -72,9 +72,9 @@ class CoursesScreen extends StatelessWidget {
                   crossAxisCount: AppScreenUtil.isMobile(context)
                       ? 2
                       : AppScreenUtil.adaptiveGridCount(context),
-                  childAspectRatio: AppScreenUtil.isMobile(context)
-                      ? 0.82
-                      : 1.05,
+                  mainAxisExtent: AppScreenUtil.isMobile(context)
+                      ? 260.h
+                      : 280.h,
                   crossAxisSpacing: 10.w,
                   mainAxisSpacing: 10.h,
                 ),
