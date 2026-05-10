@@ -12,6 +12,7 @@ import '../../constants/router/app_routes_list.dart';
 import '../../providers/auth_form_provider.dart';
 import '../../providers/auth_provider.dart';
 import '../../shared/utils/screen_util.dart';
+import '../../shared/validators/app_validators.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -73,15 +74,7 @@ class LoginScreen extends StatelessWidget {
                             decoration: const InputDecoration(
                               labelText: 'Email',
                             ),
-                            validator: (String? value) {
-                              if (value == null || value.trim().isEmpty) {
-                                return 'Email is required';
-                              }
-                              if (!value.contains('@')) {
-                                return 'Enter a valid email';
-                              }
-                              return null;
-                            },
+                            validator: AppValidators.email,
                           ),
                           SizedBox(height: 12.h),
                           TextFormField(
@@ -98,15 +91,7 @@ class LoginScreen extends StatelessWidget {
                                 ),
                               ),
                             ),
-                            validator: (String? value) {
-                              if (value == null || value.isEmpty) {
-                                return 'Password is required';
-                              }
-                              if (value.length < 6) {
-                                return 'Minimum 6 characters';
-                              }
-                              return null;
-                            },
+                            validator: AppValidators.password,
                           ),
                           SizedBox(height: 10.h),
                           Row(
